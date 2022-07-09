@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatDividerModule } from '@angular/material/divider';
+import { LoginComponent } from './login/login.component';
 @NgModule({
   imports: [
     BrowserModule,
@@ -41,6 +42,7 @@ import { MatDividerModule } from '@angular/material/divider';
     ProductDetailsComponent,
     CartComponent,
     ShippingComponent,
+    LoginComponent,
   ],
   bootstrap: [AppComponent],
 })
