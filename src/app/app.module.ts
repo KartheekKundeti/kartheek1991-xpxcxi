@@ -28,7 +28,8 @@ import { LoginComponent } from './login/login.component';
     MatFormFieldModule,
     MatInputModule,
     RouterModule.forRoot([
-      { path: '', component: ProductListComponent },
+      { path: '', component: LoginComponent },
+      { path: 'home', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'addproduct', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },
