@@ -2,7 +2,7 @@
   <h1>Welcome to eBidding Application</h1>
 </a>
 
-<a routerLink="/addproduct" class="button fancy-button">
+<a *ngIf="enable" routerLink="/addproduct" class="button fancy-button">
   <i class="material-icons">shopping_cart</i>Add New Product
 </a>
 

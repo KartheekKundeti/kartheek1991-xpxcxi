@@ -10,11 +10,7 @@ import { first } from 'rxjs/operators';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  constructor(
-    private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router
-  ) {
+  constructor(private formBuilder: FormBuilder, private router: Router) {
     // redirect to home if already logged in
     this.loginForm = this.formBuilder.group({
       username: ['', Validators.required],
@@ -25,6 +21,8 @@ export class LoginComponent implements OnInit {
   loading = false;
   submitted = false;
   returnUrl: string = '';
+  password: string = '';
+  userName: string = '';
   ngOnInit() {
     // get return url from route parameters or default to '/'
     //this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
@@ -41,8 +39,11 @@ export class LoginComponent implements OnInit {
     // stop here if form is invalid
     if (this.loginForm.invalid) {
       return;
+    } else {
+      this.loading = true;
+      if (this.password === 'buyer' && this.userName === 'buyer') {
+        this.router.navigateByUrl('/home');
+      }
     }
-
-    this.loading = true;
   }
 }
