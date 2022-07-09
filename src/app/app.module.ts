@@ -35,6 +35,7 @@ import { LoginComponent } from './login/login.component';
       { path: 'shipping', component: ShippingComponent },
     ]),
   ],
+  //providers: [AppService],
   declarations: [
     AppComponent,
     TopBarComponent,
